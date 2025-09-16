@@ -1,29 +1,30 @@
 #include <iostream>
 #include <vector>
-#include <limits>
 using namespace std;
 
 int main() {
     int V; 
-    cout << "Vnesi broj na teminja"<<endl;
+    cout << "Vnesi broj na teminja" << endl;
     cin >> V;
 
+    const int INF = 1000000; 
+
     vector<vector<int>> graph(V, vector<int>(V));
-    cout << "Vnesi ja matricata"<<endl;
+    cout << "Vnesi ja matricata" << endl;
     for (int i = 0; i < V; i++) {
         for (int j = 0; j < V; j++) {
             cin >> graph[i][j];
             if (graph[i][j] == 0 && i != j) {
-                graph[i][j] = numeric_limits<int>::max(); 
+                graph[i][j] = INF; 
             }
         }
     }
 
     int matej;
-    cout << "Od koe teme sakas da najdes najkratok pat? "<<endl;
+    cout << "Od koe teme sakas da najdes najkratok pat? " << endl;
     cin >> matej;
 
-    vector<int> dist(V, numeric_limits<int>::max());
+    vector<int> dist(V, INF);
     vector<bool> visited(V, false);
     dist[matej] = 0;
 
@@ -38,7 +39,7 @@ int main() {
         visited[u] = true;
 
         for (int v = 0; v < V; v++) {
-            if (graph[u][v] != numeric_limits<int>::max() && !visited[v]) {
+            if (graph[u][v] != INF && !visited[v]) {
                 if (dist[u] + graph[u][v] < dist[v]) {
                     dist[v] = dist[u] + graph[u][v];
                 }
@@ -49,7 +50,7 @@ int main() {
     cout << endl << "najkratkite rastojanija od temeto " << matej << " se:" << endl;
     for (int i = 0; i < V; i++) {
         cout << endl << "do " << i << ": ";
-        if (dist[i] == numeric_limits<int>::max()) {
+        if (dist[i] == INF) {
             cout << "INF" << endl;
         } else {
             cout << dist[i] << endl;
@@ -58,3 +59,4 @@ int main() {
 
     return 0;
 }
+
