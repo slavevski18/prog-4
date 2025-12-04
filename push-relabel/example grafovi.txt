@@ -1,0 +1,109 @@
+Graph 1
+Nodes: 6
+Edges:
+0 1 16
+0 2 13
+1 2 10
+2 1 4
+1 3 12
+3 2 9
+2 4 14
+4 3 7
+3 5 20
+4 5 4
+Source: 0
+Sink: 5
+Max Flow: 23
+
+Graph 2 
+Nodes: 4
+Edges:
+0 1 100
+0 2 100
+1 2 1
+1 3 100
+2 3 100
+Source: 0
+Sink: 3
+Max Flow: 200
+
+Graph 3
+Nodes: 5
+Edges:
+0 1 10
+0 2 5
+1 2 15
+1 3 10
+2 3 10
+2 4 5
+3 4 10
+Source: 0
+Sink: 4
+Max Flow: 15
+
+Graph 4
+Nodes: 4
+Edges:
+0 1 3
+0 2 2
+1 2 5
+1 3 2
+2 3 3
+Source: 0
+Sink: 3
+Max Flow: 4
+
+Graph 5
+Nodes: 6
+Edges:
+0 1 10
+0 2 10
+1 3 4
+1 4 8
+1 2 2
+2 4 9
+3 5 10
+4 3 6
+4 5 10
+Source: 0
+Sink: 5
+Max Flow: 19
+
+Graph 6
+Nodes: 5
+Edges:
+0 1 8
+0 2 10
+1 3 5
+2 1 2
+2 4 10
+3 4 10
+Source: 0
+Sink: 4
+Max Flow: 15
+
+Graph 7 
+Nodes: 4
+Edges:
+0 1 5
+0 2 7
+1 2 3
+1 3 6
+2 3 8
+Source: 0
+Sink: 3
+Max Flow: 11
+
+Graph 8
+Nodes: 5
+Edges:
+0 1 10
+0 2 5
+1 3 10
+2 1 15
+2 4 10
+3 4 10
+Source: 0
+Sink: 4
+Max Flow: 15
+
